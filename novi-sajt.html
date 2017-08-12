@@ -1,0 +1,657 @@
+﻿<!DOCTYPE HTML-//W3C//DTD HTML5//EN"
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content=; charset=utf-8">
+	<title>Draggutin</title>
+	<meta name="description" content="How to create two column .">
+	<meta name="copyright" content="Copyright (c) 2017 Peja">
+	<meta name="author" content="Dragutin Peja Pejić">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<body>
+
+<style>	
+@charset "UTF-8";
+/* Base Styles */
+#cssmenu > ul,
+#cssmenu > ul li,
+#cssmenu > ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul {
+  position: relative;
+  z-index: 597;
+}
+#cssmenu > ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 0.8em;
+  vertical-align: middle;
+}
+#cssmenu > ul li.hover,
+#cssmenu > ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu > ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu > ul ul li {
+  float: none;
+}
+#cssmenu > ul ul ul {
+  top: 1px;
+  left: 99%;
+}
+#cssmenu > ul li:hover > ul {
+  visibility: visible;
+}
+/* Align last drop down RTL */
+#cssmenu > ul > li.last ul ul {
+  left: auto !important;
+  right: 99%;
+}
+#cssmenu > ul > li.last ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu > ul > li.last {
+  text-align: right;
+}
+/* Theme Styles */
+#cssmenu > ul {
+  border-top: 4px solid #d8da3d;
+  font-family: "Times New Roman";
+  font-size: 14px;
+  background: #1e1e1e;
+  background: -moz-linear-gradient(top, #eaf975 0%, #f9f9b3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e1e1e), 
+  color-stop(100%, #f9f9b3));
+  background: -webkit-linear-gradient(top, #1e1e1e 0%, ##eaf975 100%);
+  background: linear-gradient(top, #1e1e1e 0%, #040404 100%);
+  width: auto;
+  zoom: 1;
+}
+#cssmenu > ul:before {
+  content: '';
+  display: block;
+}
+#cssmenu > ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu > ul li a {
+  display: inline-block;
+  padding: 6px 22px;
+}
+#cssmenu > ul > li.active,
+#cssmenu > ul > li.active:hover {
+  background-color: #d8da3d;
+}
+#cssmenu > ul > li > a:link,
+#cssmenu > ul > li > a:active,
+#cssmenu > ul > li > a:visited {
+  color: #00082b;
+}
+#cssmenu > ul > li > a:hover {
+  color: #00082b;
+}
+#cssmenu > ul ul ul {
+  top: 0;
+}
+#cssmenu > ul li li {
+  background-color: #fbf68d;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 12px;
+}
+#cssmenu > ul li.hover,
+#cssmenu > ul li:hover {
+  background-color: #eee744;
+}
+#cssmenu > ul > li.hover,
+#cssmenu > ul > li:hover {
+  background-color: #f9f9b3;
+  -webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+#cssmenu > ul a:link,
+#cssmenu > ul a:visited {
+  color: #00082b;
+  text-decoration: none;
+}
+#cssmenu > ul a:hover {
+  color: #00082b;
+}
+#cssmenu > ul a:active {
+  color: #00082b;
+}
+#cssmenu > ul ul {
+  border: 1px solid #CCC \9;
+  -webkit-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  width: 150px;
+}
+
+	html 	{
+		font-size:14px;
+		max-width:90%;
+                max-height:80%;
+		min-margin-top:1%;
+		min-margin-bottom:3%;
+                max-margin-top:2%;
+		max-margin-bottom:2%;
+                min-margin-left:50%;
+                min-margin-right:50%;
+		color:black;
+		background:#a7a09a;
+		}
+	#wrap 	{
+		max-width:80%;
+		max-height:95%;
+		margin:auto;
+                margin-top:10px;
+                margin-bottom:5px;
+		background:#d8da3d;
+		}
+	#header {
+    		padding:25px 0px;
+		background:url(http://www.mediafire.com/convkey/bee5/97t3i9gd449598czg.jpg);
+		}
+	h1 	{
+	    margin:30px;
+	    text-align: center;
+	    color:#009ACD;
+	    font-size:20px;
+    		}
+	#main 	{
+		float:left;
+		min-width:50%;
+                max-width:50%;
+		height: 2450px;
+                margin:auto;
+		background:#d8da3d;
+                line-height:16px;
+               
+		}
+	
+	h2 	{	
+  		margin:0px 0px;
+                margin-top:0px;
+                margin-bottom:0px;
+                line-height:16px;
+                font-size:19px;
+		line-height:12px;
+               	}
+        h3 	{
+		text-align: left;
+                line-height:-12px;
+                margin-right:0px;
+                font-size:17px;
+	        }
+        h4 	        {
+		text-align: left;
+                line-height:12px;
+                margin-right:0px;
+
+                font-size:9px;
+                        }
+        h5 	        {
+		text-align: left;
+                line-height:12px;
+                margin-right:0px;
+                font-size:17px;		
+		}
+    div.cities  {
+    background-color:#d8da3d;
+    color: black;
+    margin-left: -10px;
+    text-align: left;
+    line-height:12px;
+		}
+    div.cities1 {
+    background-color:#d8da3d;
+    color: black;
+    text-align: left;
+    margin-left: 60px;
+    line-height:13px;
+    
+                } 
+    div.cities2 {
+    background-color:#d8da3d;
+    color: black;
+    margin-left: -30px;
+    line-height:12px;
+                }
+    div.cities3 {
+    background-color:#d8da3d;
+    color: black;
+    margin-left: -9px;
+    line-height:15px;
+                }
+    div.cities4 {
+    background-color:#d8da3d;
+    color: black;
+    margin-left: -9px;
+    line-height:20px;
+                }
+
+
+	#sidebar{
+		float:right;
+		min-width:50%;
+                max-width:50%;
+		height: 2450px;
+		padding:0px;
+		background:#d8da3d;
+                margin-left:30px;
+                margin-right:0px;
+                align: center;
+                font-size:10px;
+                line-height:12px;
+                }
+      h3 	{
+		padding:40px 20px 0px 40px;
+               line-height:15px;
+		}
+		
+   
+	#footer {
+		clear:both;
+                margin:5px;
+		padding:12px 20px;
+		background:#fafad2;
+                min-width:95%;
+                max-width:95%;
+		}
+	#footer p {
+		margin:5px;
+		text-align: center
+    		}
+	* html #footer {
+                margin:15px;		
+                height:4px;
+                width:98%;
+		text-align: center
+		}
+
+ <style>
+        .flex-container {
+  display: flex;
+  width: 200px;
+  height: 350px;
+  background-color: lightgrey;
+}
+.flex-item {
+  margin: 2px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+.item1 {
+  flex: none; /* Could be omitted? */
+  background-color: cornflowerblue;
+  font-size:14px;
+  margin-top:15px;
+}
+.item2 {
+  flex: 1;
+  background-color: orange;
+  font-size:14px;
+}
+.item3 {
+  flex: 1;
+  background-color: green;
+  font-size:14px;
+}
+</style>
+
+</head>
+
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_pejja&utm_content=footer_img"><img src="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"  alt="www.000webhost.com"></a></div><div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_pejja&utm_content=footer_img"><img src="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"  alt="www.000webhost.com"></a></div></body>
+
+<body>
+<div id="wrap">
+	<div id="header"><h1>Moj prvi html</h1></div>
+<div class="menu-wrap">
+    <div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li class='active has-sub'><a href='#'><span>IT Obuka</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>IT Predmeti</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>HTML</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'>JavaScript</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+</div>
+
+ <div class="flex-container">
+  <div class="flex-item item1">flex item 1</div>
+  <div class="flex-item item2">flex item 2</div>
+  <div class="flex-item item3">flex item 3</div>
+</div>
+    <script type="text/javascript">
+        
+    </script>
+
+<div id="main">
+
+<h3>Column 1</h3>
+
+<h3>Planeta Mars</h3>
+
+<h3><img src="http://www.mediafire.com/convkey/d574/g43mcj339hijjiezg.jpg" alt="Zastava Marsa"
+    "WIDTH="98" HEIGHT="59"/></h3>
+<div class="cities1">
+</div>
+		<ul>
+  <li>Sunce se sa Marsa vidi kao plavičasto tokom zore i sutona, odnosno kada je blizu horizonta.I upola manje nego što možemo
+	da ga vidimo sa Zemlje.</li>
+  <li>Mars ima tako malo slobodnog kiseonika u atmosferi da bi vam, kada biste pokušali da udahnete na njegovoj površini,
+	trebalo 14.500 udisaja ne biste li dobili onoliko kiseonika kao prilikom jednog hvatanja vazduha na Zemlji. I tokom zime na Marsu,
+	oko 20% vazduha se zamrzne.</li>
+  <li>Prosečna temperatura na Marsu iznosi minus 63 stepena Celzijusova. Temperatura može biti od –140 °C do nešto više od 0 °C,
+	zavisno od doba dana i godine kao i od položaja planete Mars.</li>
+
+    
+	  <h4>
+          <table border="1"
+          <table width="100";table height="40“;table border="1">
+	  <tr>
+	    <td>  Planeta </td>
+	    <td>  Min. temp.°C </td>
+	    <td>  Max. temp.°C </td>
+	    <td>  Napomena  </td>
+
+	</tr>
+	  <tr>
+	    <td>  Merkur  </td>
+	    <td>  -170    </td>
+	    <td>  +430    </td>
+	    <td></td>
+	</tr>
+	  <tr>
+	    <td> Venera </td>
+	    <td>  </td>
+	    <td>  +470  </td>
+	    <td></td>
+	</tr>
+	  <tr>
+	    <td>  Zemlja  </td>
+	    <td>  -89  </td>
+	    <td>  +56  </td>
+	    <td></td>
+	</tr>
+	  <tr>
+	    <td>  Mars   </td>
+	    <td>  -125 </td>
+	    <td>  +20  </td>
+	    <td></td>
+	</tr></br></table></h4><br>
+
+
+
+
+  <li>Marsova atmosfera je primetno drugačija od Zemljine, a sastoji se uglavnom od ugljen dioksida (95.32%),
+	    uz male mešavine drugih elemenata: azota (2.7%), argona (1.6%), kiseonika (0.13%) i neona (0,00025%). Takođe
+	    sadrži i vodenu paru (0.03%), a u polarnim krajevima je nađen ozon.</li>
+  <li>Pošto su tokom vremena sunčeve oluje uništile atmosferu ove planete, Mars ima ekstremno nizak pritisak i
+	    veoma je hladan. Zbog toga molekule vode mogu da postoje samo u dva stanja - čvrstom (kao led) i gasovitom (kao para).</li>
+  <li>Mars ima ledene kape na polovima, baš kao i Zemlja. Ali, marsovske se sastoje od smrznutog ugljen-dioksida.</li>
+  <li>Mars ima svoju zastavu koju je dizajnirao Nasin inženjer. Zastava se sastoji od tri boje: crvene koja predstavlja Mars,
+	    zelene koja simbolizuje transformaciju u nastanjivu planetu i plave, koja predstavlja planetu sličnu Zemlji.</li>
+  <li>Za razliku od Zemlje, Mars ima dva meseca. U pitanju su Deimos i Fobos, koji su veoma mali, ali su u toliko niskoj orbiti
+	    iznad planete da se mogu videti s pojedinih delova njene površine.</li>
+  <li>Iako je Mars dosta manji od Zemlje, dve planete imaju skoro istu kopnenu masu. Stvar je u tome što dve trećine Zemlje
+	    pokriva voda, a na Marsu ne postoje okeani, mora, kezera i reke.</li>
+  <li>Holivudski film "Gravitacija" koštao je više nego indijska misija, koja je poslala sondu u orbitu Marsa. Indiju je misija
+	    koštala 74 miliona dolara, dok je "Gravitacija" koštala 100 miliona.</li>
+  <li>Kada bismo putovali automobilom brzinom od 60km/h, trebala bi nam 271 godina i 221 dan da stignemo od Marsa do Zemlje.</li>
+  <li>Mars nema magnetno polje, što ukazuje da nema tečno gvozdeno jezgro kao što ima Zemlja. Ali postoje dokazi da je nekada imao.</li>
+  <li>Mineraloški sastav Marsovog tla određen je uglavnom kremenom i limonitom(po hemijskom sastavu limonit je hidroksid gvožđa).
+	    Limonit daje površini Marsa svojstvenu crvenu boju. Hemijska analiza pokazala je 50% kisonika, 21% silicijuma, 13% železa, 5%
+			magnezijuma, 4% kalcijuma, 3% aluminijuma,3% sumpora, a u tragovima ima titana, fosfora, kalija, hlora i drugih hemijskih
+			elemenata.</li>
+
+<div class="cities2">
+<h3>Mesec</h3>
+</div>
+	
+
+<img src="http://www.mediafire.com/convkey/1b93/zs4y78uf5u8se6wzg.jpg" alt="Mesec" "  /><br><br>
+	<li>Neko će reći – ima 28 – do 31 dan. Neko će reći – nema svoje svetlosti, samo odbija sunčevu. Neko će reći – ima ih 12,
+	    a neko - samo je jedan. Neki na njemu primećuju mora, neki najveće dostignuće čovečanstva, a neki da je, prosto,
+	    čaroban. (Elva Jovanovic) </li>
+
+<div class="cities2">
+<h3>Planeta Zemlja</h3>
+
+<h3><img src="http://www.mediafire.com/convkey/d831/7gf63c5r9spw5gdzg.jpg"
+	WIDTH="180" HEIGHT="180"alt="ZemljaAnimacija" />
+<img src="http://www.mediafire.com/convkey/e08a/gi7sk5z8vmuhwkgzg.jpg"
+	WIDTH="180" HEIGHT="180"alt="ZemljaLopta" /></h3></div><br><br>
+
+<div class="cities">
+
+</body></div><br>
+
+
+
+
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attributes.</p>
+
+<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='http://www.mediafire.com/convkey/7624/e27gwo27881wjbbzg.jpg'">Turn on the light</button>
+
+<img id="myImage" src="http://www.mediafire.com/convkey/60f8/5zig3yqi9iq5q24zg.jpg">
+
+<button onclick="document.getElementById('myImage').src='http://www.mediafire.com/convkey/60f8/5zig3yqi9iq5q24zg.jpg'">Turn off the light</button>
+
+</body>
+</html>
+
+
+
+<div class="cities"><br><br>
+<h3>Nauka vraća vid</h3></div>
+
+
+<iframe width="210" height="173" src="https://www.youtube.com/embed/4ODcGJRqaok" frameborder="0" allowfullscreen></iframe></div>
+
+
+<div id="main">
+
+<div class="cities1">
+  
+	<h3>Column 2</h3>
+	<h3>Dnevni raspored</h3></div>
+
+<div class="cities1">
+	<table border="2" height="5%“ width="40%"
+	style="background-color:#FAFAD2; WIDTH="75" HEIGHT="15"></div>
+
+    <td>  Dan </td>
+    <td>  Vremenski period </td>
+    <td>  Vrsta aktivnosti</td>
+    
+</tr>
+  <tr>
+    <td>  Pon  </td>
+    <td>  06h - 08h    </td>
+    <td>  Doručkovati </td>
+    <td>  </td>
+</tr>
+  <tr>
+    <td>  Pon    </td>
+    <td>  08h - 10h    </td>
+    <td>  Spavati  </td>
+    <td></td>
+</tr>
+  <tr>
+    <td>  Pon  </td>
+    <td>  10h - 12h </td>
+    <td>  Užina  </td>
+    <td></td>
+</tr>
+  <tr>
+    <td>  Pon   </td>
+    <td>  12h - 14h </td>
+    <td>  Spavati  </td>
+    <td></td>
+ </tr></br></table>
+ <img src="http://www.mediafire.com/convkey/4826/amb7ubwod9qir2azg.jpg"
+ alt="Popodnevni odmor" WIDTH="277" HEIGHT="180"/><br>
+
+ <table border="2" height="5%“ width="40%"
+ style="background-color:#FAFAD2; WIDTH="150" HEIGHT="30">
+ <tr>
+     <td>  Pon     </td>
+     <td>  Vremenski period </td>
+     <td>  Vrsta aktivnosti</td>
+    
+
+ </tr>
+   <tr>
+     <td>  Pon  </td>
+     <td>  14h - 16h    </td>
+     <td>  Glavni ručak    </td>
+     <td></td>
+ </tr>
+   <tr>
+     <td> Pon </td>
+     <td>  16h - 18h </td>
+     <td>  Podnevni odmor  </td>
+     <td></td>
+ </tr>
+   <tr>
+     <td>  Pon  </td>
+     <td>  18h - 20h  </td>
+     <td>  Večera  </td>
+     <td></td>
+ </tr>
+   <tr>
+     <td>  Pon   </td>
+     <td>  20h - 06h </td>
+     <td>  Na spavanje  </td>
+     <td></td>
+      </tr>
+ </table>
+
+
+<div class="cities1">
+		<h3>NASA istražuje svemir</h3></div>
+	     <img src="http://www.mediafire.com/convkey/ce5a/9acocdtra005kzpzg.jpg"
+			 WIDTH="366" HEIGHT="210" alt="Astronauti" /><br>
+<div class="cities1">
+		<h3>Dragutin istražuje HTML</h3></div><br>
+	     <img src="http://www.mediafire.com/convkey/6232/5k2lwzn9462r4vjzg.jpg"
+			 WIDTH="180" HEIGHT="250"alt="Koncentrejšn" />
+	     <img src="http://www.mediafire.com/convkey/80ef/n60ttjb63vx1943zg.jpg"
+			 WIDTH="180" HEIGHT="250"alt="MojLapTop" /><br>
+
+		<p class="klasa">Sve unutar body elementa se prikazuje u prozoru brauzera .</p>
+    <p class="klasa" id="ident">Dobrodošli na moju prvu web stranicu</p>
+    <p div class="klasa"><acronym title="National Aeronautics and Space Administration">NASA
+    <dfnacronym> istražuje svemir.</p>
+
+    </a>
+<style>
+  .klasa {
+    background-color: #FAFAD2;
+    color: black;
+
+		width: 400px;
+  }
+  div.klasa {
+    font-weight: bold;
+		width: 400px;
+  }
+  #ident {
+    color: black;
+		width: 400px;
+  }
+</style>
+
+<p class="klasa">Pasus klase "klasa".</p>
+<p class="klasa" id="ident">Još jedan pasus klase "klasa", ali identifokovan kao "ident".</p>
+<div class="klasa">Div blok klase "klasa".</div><br>
+
+<div class="cities1">
+
+<h5>Mapiranje planeta Sunčevog sistema</h5><br>
+</div>
+
+<MAP>
+    <IMG SRC="http://www.mediafire.com/convkey/2b55/virmzc9nfkt9ckbzg.jpg" usemap="#prvamapa"/> 
+    <MAP NAME="prvamapa">
+    <AREA SHAPE="circle" COORDS="168,136,45" href="https://sh.wikipedia.org/wiki/Sunce" alt="Wikipedia" title="SUNCE" >
+    <AREA SHAPE="circle" COORDS="115,163,5" href="https://bs.wikipedia.org/wiki/Merkur" alt="Wikipedia" title="MERKUR" >
+    <AREA SHAPE="circle" COORDS="84,151,10" href="https://sh.wikipedia.org/wiki/Venera_(planeta)" alt="Wikipedia" title="VENERA" >
+    <AREA SHAPE="circle" COORDS="58,137,10" href="https://bs.wikipedia.org/wiki/Zemlja_(planeta)" alt="Wikipedia" title="ZEMLJA" >
+    <AREA SHAPE="circle" COORDS="47,131,10" href="https://hr.wikipedia.org/wiki/Mjesec" alt="Wikipedia" title="MESEC" >
+    <AREA SHAPE="circle" COORDS="27,113,10" href="https://en.wikipedia.org/wiki/Mars" alt="Wikipedia" title="MARS" >
+    <AREA SHAPE="circle" COORDS="262,57,10" href="https://en.wikipedia.org/wiki/Jupiter" alt="Wikipedia" title="JUPITER" >
+    <AREA SHAPE="circle" COORDS="298,43,10" href="https://en.wikipedia.org/wiki/Saturn" alt="Wikipedia" title="SATURN" >
+    <AREA SHAPE="circle" COORDS="326,36,10" href="https://sh.wikipedia.org/wiki/Uran_(planeta)" alt="Wikipedia" title="URAN" >
+    <AREA SHAPE="circle" COORDS="349,30,10" href="https://de.wikipedia.org/wiki/Neptun_(Planet)" alt="Wikipedia" title="NEPTUN" >
+    <AREA SHAPE="circle" COORDS="403,27,10" href="https://bs.wikipedia.org/wiki/Pluton" alt="Wikipedia" title="PLUTON" >
+</map>
+
+<div class="cities3">
+<p>Sunce pripada zvijezdama spektralne klase G2, gdje 99.86% </br>
+   mase sistema otpada na masu zvijezde.</br>
+   Planete su osam tela u Sunčevom sistemu. Navodimo ih prema </br> 
+   udaljenosti od Sunca, od najbližeg do najdaljeg:</br> 
+   Merkur, Venera, Zemlja, Mars, Jupiter, Saturn, Uran i Neptun.
+</p></div>
+
+
+
+
+<div class="cities1"><br><br>
+<h5>Sofija</h5><br>
+</div>
+
+<div class="cities1">
+</div>
+</div>
+<div class="cities1">
+<iframe width="210" height="173" src="https://www.youtube.com/embed/W0_DPi0PmF0"
+frameborder="0" allowfullscreen></iframe>
+
+</div></div>
+ 		<div id="footer">
+ 		<p>Copyright (c) 2017 Peja</p>
+
+</div>
+</body>
+</html>
