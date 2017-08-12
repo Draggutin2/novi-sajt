@@ -7,10 +7,10 @@
 	<meta name="copyright" content="Copyright (c) 2017 Peja">
 	<meta name="author" content="Dragutin Peja Pejić">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
 <body>
 
-<style>
+<style>	
 @charset "UTF-8";
 /* Base Styles */
 #cssmenu > ul,
@@ -73,7 +73,7 @@
   font-size: 14px;
   background: #1e1e1e;
   background: -moz-linear-gradient(top, #eaf975 0%, #f9f9b3 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e1e1e),
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e1e1e), 
   color-stop(100%, #f9f9b3));
   background: -webkit-linear-gradient(top, #1e1e1e 0%, ##eaf975 100%);
   background: linear-gradient(top, #1e1e1e 0%, #040404 100%);
@@ -182,10 +182,10 @@
                 margin:auto;
 		background:#d8da3d;
                 line-height:16px;
-
+               
 		}
-
-	h2 	{
+	
+	h2 	{	
   		margin:0px 0px;
                 margin-top:0px;
                 margin-bottom:0px;
@@ -210,7 +210,7 @@
 		text-align: left;
                 line-height:12px;
                 margin-right:0px;
-                font-size:17px;
+                font-size:17px;		
 		}
     div.cities  {
     background-color:#d8da3d;
@@ -225,8 +225,8 @@
     text-align: left;
     margin-left: 60px;
     line-height:13px;
-
-                }
+    
+                } 
     div.cities2 {
     background-color:#d8da3d;
     color: black;
@@ -264,8 +264,8 @@
 		padding:40px 20px 0px 40px;
                line-height:15px;
 		}
-
-
+		
+   
 	#footer {
 		clear:both;
                 margin:5px;
@@ -279,7 +279,7 @@
 		text-align: center
     		}
 	* html #footer {
-                margin:15px;
+                margin:15px;		
                 height:4px;
                 width:98%;
 		text-align: center
@@ -321,7 +321,7 @@
 
 <body>
 <div id="wrap">
-	<div id="header"><h1>html</h1></div>
+	<div id="header"><h1>Moj prvi html</h1></div>
 <div class="menu-wrap">
     <div id='cssmenu'>
 <ul>
@@ -354,7 +354,7 @@
   <div class="flex-item item3">flex item 3</div>
 </div>
     <script type="text/javascript">
-
+        
     </script>
 
 <div id="main">
@@ -376,7 +376,7 @@
   <li>Prosečna temperatura na Marsu iznosi minus 63 stepena Celzijusova. Temperatura može biti od –140 °C do nešto više od 0 °C,
 	zavisno od doba dana i godine kao i od položaja planete Mars.</li>
 
-
+    
 	  <h4>
           <table border="1"
           <table width="100";table height="40“;table border="1">
@@ -439,7 +439,7 @@
 <div class="cities2">
 <h3>Mesec</h3>
 </div>
-
+	
 
 <img src="http://www.mediafire.com/convkey/1b93/zs4y78uf5u8se6wzg.jpg" alt="Mesec" "  /><br><br>
 	<li>Neko će reći – ima 28 – do 31 dan. Neko će reći – nema svoje svetlosti, samo odbija sunčevu. Neko će reći – ima ih 12,
@@ -491,7 +491,7 @@
 <div id="main">
 
 <div class="cities1">
-
+  
 	<h3>Column 2</h3>
 	<h3>Dnevni raspored</h3></div>
 
@@ -502,7 +502,7 @@
     <td>  Dan </td>
     <td>  Vremenski period </td>
     <td>  Vrsta aktivnosti</td>
-
+    
 </tr>
   <tr>
     <td>  Pon  </td>
@@ -537,7 +537,7 @@
      <td>  Pon     </td>
      <td>  Vremenski period </td>
      <td>  Vrsta aktivnosti</td>
-
+    
 
  </tr>
    <tr>
@@ -611,7 +611,7 @@
 </div>
 
 <MAP>
-    <IMG SRC="http://www.mediafire.com/convkey/2b55/virmzc9nfkt9ckbzg.jpg" usemap="#prvamapa"/>
+    <IMG SRC="http://www.mediafire.com/convkey/2b55/virmzc9nfkt9ckbzg.jpg" usemap="#prvamapa"/> 
     <MAP NAME="prvamapa">
     <AREA SHAPE="circle" COORDS="168,136,45" href="https://sh.wikipedia.org/wiki/Sunce" alt="Wikipedia" title="SUNCE" >
     <AREA SHAPE="circle" COORDS="115,163,5" href="https://bs.wikipedia.org/wiki/Merkur" alt="Wikipedia" title="MERKUR" >
@@ -629,8 +629,8 @@
 <div class="cities3">
 <p>Sunce pripada zvijezdama spektralne klase G2, gdje 99.86% </br>
    mase sistema otpada na masu zvijezde.</br>
-   Planete su osam tela u Sunčevom sistemu. Navodimo ih prema </br>
-   udaljenosti od Sunca, od najbližeg do najdaljeg:</br>
+   Planete su osam tela u Sunčevom sistemu. Navodimo ih prema </br> 
+   udaljenosti od Sunca, od najbližeg do najdaljeg:</br> 
    Merkur, Venera, Zemlja, Mars, Jupiter, Saturn, Uran i Neptun.
 </p></div>
 
